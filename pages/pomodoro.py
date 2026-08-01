@@ -2,6 +2,7 @@ import streamlit as st
 import time  
 from streamlit_autorefresh import st_autorefresh
 
+
 st.set_page_config(page_title="Pomodoro Timer", page_icon="⏱️")
 
 st.markdown('''<style>
@@ -28,7 +29,6 @@ st.markdown('''<style>
     }
 </style>''', unsafe_allow_html=True)
 
-# ---------- SESSION STATE ----------
 if "timer_running" not in st.session_state:
     st.session_state.timer_running = False
 if "remaining_seconds" not in st.session_state:
@@ -44,7 +44,6 @@ st.write("Set your work and break lengths, then press Start.")
 st.slider("Pomodoro session length (minutes)", 1, 60, 25, key="timer_slider")
 st.slider("Break session length (minutes)", 1, 60, 5, key="break_slider")
 
-# ---------- BUTTONS ----------
 col1, col2 = st.columns(2)
 
 with col1:
@@ -61,7 +60,6 @@ with col2:
         st.session_state.end_time = 0
         st.session_state.message = "Timer reset."
 
-# ---------- COUNTDOWN LOGIC ----------
 if st.session_state.timer_running:
     remaining = int(st.session_state.end_time - time.time())
 
@@ -82,10 +80,9 @@ else:
     else:
         st.subheader("Ready to start your Pomodoro session.")
 
-# ---------- DISPLAY MESSAGE ----------
 if st.session_state.message:
     st.success(st.session_state.message)
 
-# ---------- BACK TO MENU ----------
 if st.button("📋 Back to Menu"):
-    st.write("Use the sidebar to return to the menu.")
+    st.switch_page("menu")
+    st.stop()

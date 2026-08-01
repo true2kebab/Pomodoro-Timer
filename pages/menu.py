@@ -18,8 +18,12 @@ st.markdown('''<style>
                   font-size: 5px !important;
                     }
            .stButton button:hover{background-color: green !important;}       
-               </style>    """, unsafe_allow_html=True''')
+               </style>    ''', unsafe_allow_html=True)
 st.title("The menu")
-st.button("History of pomodoro")
-st.button("Pomodoro")
-st.button("Tutorial on how to use it")
+if st.button("History and tutorial of pomodoro"):
+    st.switch_page("history.py")
+    st.stop()
+if st.button("Pomodoro"):
+    st.switch_page("pomodoro.py")
+    st.stop()
+

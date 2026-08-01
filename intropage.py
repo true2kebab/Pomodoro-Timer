@@ -28,6 +28,3 @@ st.title("The start of your productivity session")
 st.header("  ")
 st.header("  ")
 left, center, right = st.columns([1, 2, 1])
-with center:
-    if st.button("YOUR PRODUCTIVITY STARTS WITH THIS BUTTON"):
-        st.write(" ")

@@ -19,3 +19,7 @@ st.text('''1. Choose a Task: Select a task you want to work on.
 3. Work: Focus on the task until the timer rings.
 4. Take a Break: Rest for 5 minutes after each Pomodoro.
 5. Repeat: Continue the cycle, taking a longer break after four Pomodoros.''')
+
+if st.button("Back to Menu"):
+    st.switch_page("menu")
+    st.stop()
