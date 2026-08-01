@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-st.markdown{'''<style>
+st.markdown('''<style>
         h1{text-align: center !important;
             font-size: 124px !important;
             font-weight: 1000 !important;}
@@ -18,7 +18,7 @@ st.markdown{'''<style>
                   font-size: 5px !important;
                     }
            .stButton button:hover{background-color: green !important;}       
-               </style>    """, unsafe_allow_html=True'''}
+               </style>    """, unsafe_allow_html=True''')
 st.title("The menu")
 st.button("History of pomodoro")
 st.button("Pomodoro")
