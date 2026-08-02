@@ -1,8 +1,6 @@
 # 🍅 PomApp – Pomodoro Timer
-a simple pomodoro timer to boost focus during studying/work
-
-
-A fully interactive productivity web app built with Python and Streamlit. It helps students (like me!) stay focused with a customisable Pomodoro timer, break reminders, session history, and a distraction‑free, hand‑styled interface.
+- a simple pomodoro timer to boost focus during studying/work
+- A fully interactive productivity web app built with Python and Streamlit. It helps students (like me!) stay focused with a customisable Pomodoro timer, break reminders, session history, and a distraction‑free, hand‑styled interface.
 
 ## ✨ Features
 - Set custom **work** and **break** durations
@@ -16,13 +14,12 @@ A fully interactive productivity web app built with Python and Streamlit. It hel
 ## 🛠️ Tech Stack
 - Python 3
 - Streamlit (interactive web framework)
-- Pillow (image handling)
 - CSS3 (custom styling)
 - Git & GitHub (version control)
 
 ## 🚀 Live Demo
-[Try the app here](https://your-app-url.streamlit.app)  
-*(Replace with your Streamlit Cloud link after deployment)*
+[Try the app here](https://pomapp.streamlit.app)
+
 
 ## 📸 Screenshots
 ![intro page](screenshots/intropage.png)
@@ -30,7 +27,5 @@ A fully interactive productivity web app built with Python and Streamlit. It hel
 ![history page](screenshots/historypage.png)
 ![pomodoro page](screenshots/pomodoro.png)
 
-## 📁 How to Run Locally
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/pomapp.git
+
+  
