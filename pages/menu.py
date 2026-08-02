@@ -1,5 +1,7 @@
 import streamlit as st
 
+if "page" not in st.session_state:
+    st.session_state.page = "intro"
 
 st.markdown('''<style>
         h1{text-align: center !important;
@@ -17,13 +19,33 @@ st.markdown('''<style>
                   font-weight: 500 !important;
                   font-size: 5px !important;
                     }
+
+                .stPageLink p{
+                                    font-size: 38px !important;
+                                    font-weight: bold;
+                                    color: red !important;
+                                    overflow: visible !important;
+                                    white-space: nowrap !important;
+                                    }
+                .stPageLink [data-testid="stIconBlock"],
+                            .stPageLink span,
+                            .stPageLink div {
+                                font-size: 32px !important; 
+                                line-height: 1 !important;
+                                overflow: visible !important;
+                                white-space: nowrap !important;
+                                }
            .stButton button:hover{background-color: green !important;}       
                </style>    ''', unsafe_allow_html=True)
 st.title("The menu")
-if st.button("History and tutorial of pomodoro"):
-    st.switch_page("history.py")
-    st.stop()
-if st.button("Pomodoro"):
-    st.switch_page("pomodoro.py")
-    st.stop()
+
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.page_link("pages/pomodoro.py", label="Open Pomodoro Timer", icon="⏱️")
+with col4:
+    st.page_link("pages/history.py", label="View History", icon="⏳")
+
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.page_link("intropage.py", label="Back to Intro Page", icon="🏠")
 

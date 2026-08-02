@@ -5,7 +5,18 @@ st.markdown('''<style>
              font-size: 124px !important; font-weight: 1000 !important; }
         .stApp { background: linear-gradient(180deg, #FF007F, #00F0FF, #8A2BE2) !important; }
         h2 { color: blue !important; }
-        p, div, span { color: inherit; }
+        
+        .stPageLink p{
+                                            font-size: 38px !important;
+                                            font-weight: bold;
+                                            color: red !important;}
+
+        .stPageLink [data-testid="stIconBlock"],
+                    .stPageLink span,
+                    .stPageLink div {
+                        font-size: 32px !important; 
+                        line-height: 1 !important;
+                        }
         </style>''', unsafe_allow_html=True)
 
 st.title("The History and How to use the Pomodoro Technique")
@@ -20,6 +31,7 @@ st.text('''1. Choose a Task: Select a task you want to work on.
 4. Take a Break: Rest for 5 minutes after each Pomodoro.
 5. Repeat: Continue the cycle, taking a longer break after four Pomodoros.''')
 
-if st.button("Back to Menu"):
-    st.switch_page("menu")
-    st.stop()
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.page_link("pages/menu.py", label="Go to Menu Page", icon="📋")
